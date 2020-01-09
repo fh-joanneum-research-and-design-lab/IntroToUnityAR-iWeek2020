@@ -5,10 +5,10 @@ using UnityEngine;
 public class ObjectSpawner : MonoBehaviour
 {
     public GameObject spawnObject;
-    private ARTapToPlaceObject ARTapToPlaceObject;
+    private PlacementIndicator placementIndicator;
     void Start()
     {
-        ARTapToPlaceObject = FindObjectOfType<ARTapToPlaceObject>();
+        placementIndicator = FindObjectOfType<PlacementIndicator>();
 
     }
 
@@ -17,7 +17,7 @@ public class ObjectSpawner : MonoBehaviour
     {
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
-            GameObject obj = Instantiate(spawnObject, ARTapToPlaceObject.transform.position, ARTapToPlaceObject.transform.rotation);
+            GameObject obj = Instantiate(spawnObject, placementIndicator.transform.position, placementIndicator.transform.rotation);
         }
     }
 }

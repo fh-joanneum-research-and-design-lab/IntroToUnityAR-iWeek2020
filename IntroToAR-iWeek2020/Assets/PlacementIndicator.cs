@@ -5,9 +5,8 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using System;
 
-public class ARTapToPlaceObject : MonoBehaviour
+public class PlacementIndicator : MonoBehaviour
 {
-
     private ARRaycastManager arOriginRayCast;
     private GameObject visual;
 
